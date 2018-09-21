@@ -8,13 +8,13 @@ print """
 \n\t=========================================================
 \n Input your choice here: [1/2/3]
 """
-choice = gets.chomp
+choice = gets.chomp.to_i
 case choice
-when "1"
+when 1
 	puts "So you chose to login?"
-when "2"
+when 2
 	puts "So you chose to register?"
-when "3"
+when 3
 	puts "So you chose to exit? That's great? Though..."
 else
 	puts """What the fuck did you fucking say about me, you little bitch?
