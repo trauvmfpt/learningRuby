@@ -1,22 +1,13 @@
-user_name = ARGV.first
-prompt = '> '
+filename = ARGV.first
 
-puts "Hi #{user_name}."
-puts "I'd like to ask you a few questions."
-puts "Do you like me #{user_name}?"
-printf prompt 
-likes = $stdin.gets.chomp
+txt = open(filename)
 
-puts "Where do you live #{user_name}?"
-printf prompt 
-lives = $stdin.gets.chomp
+puts "Here's your file #{filename}:\n\n"
+puts txt.read, "\n"
 
-#a comma for puts is like using it twice
-puts "What kind of computer do you have? ", prompt 
-computer = $stdin.gets.chomp 
+print "Type the filename again: \n"
+file_again = $stdin.gets.chomp
 
-puts """
-Alright, so you said #{likes} about liking me.
-You live in #{lives}. Not sure where that is.
-And you have a #{computer} computer. Nice.
-"""
+txt_again = open(file_again)
+
+puts txt_again.read, "\n"
