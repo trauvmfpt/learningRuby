@@ -11,3 +11,6 @@ file_again = $stdin.gets.chomp
 txt_again = open(file_again)
 
 puts txt_again.read, "\n"
+
+txt.close()
+txt_again.close()
